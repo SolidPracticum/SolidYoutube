@@ -1,10 +1,12 @@
-import VideoCard from '../components/video/VideoCard'
+import Video from '../components/video/Video'
+import Comment from '../containers/Comments/Comment/Comment'
 
 function HomePage() {
   return (
     <div className='page'>
       <h1>Home page</h1>
-      <VideoCard />
+      <Video />
+      <Comment />
     </div>
   )
 }
