@@ -1,3 +1,22 @@
 {
-    "greeting": "Отредактируйте src/App.js и сохраните для перезагрузки."
+    "greeting": "Отредактируйте src/App.js и сохраните для перезагрузки.",
+
+    
+        "login": "Войти",
+        "email": "Почта",
+        "placeholder_email": "Ваша почта",
+        "password": "Пароль",
+        "login_btn": "Войти",
+        "google_btn": "Войдите в систему с помощью Google",
+        "forgot_password": "Забыли пароль?",
+        "account": "У вас нет учетной записи?",
+        "register": "Зарегистрироваться",
+    
+        "password_reset_title": "Сброс пароля",
+        "reset_email": "Почта",
+        "email_placeholder": "Ваша почта",
+        "reset_password_btn": "Сбросить мой пароль",
+        "or": "Или",
+        "back_to_login": "Вернуться на страницу входа"
+
 }
