@@ -2,26 +2,18 @@ import React from 'react'
 import { useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { Link } from 'react-router-dom'
-import css from './Login_page.module.scss'
+import scss from './LoginPage.module.scss'
 import ReCAPTCHA from 'react-google-recaptcha'
 
-export default function Login_page() {
+export default function LoginPage() {
   const { t } = useTranslation()
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
-  const [error] = useState('')
   const [captcha, setCaptcha] = useState(false)
   return (
-    <div className={css.wrapper}>
-      <form className={css.main}>
+    <div className={scss.wrapper}>
+      <form className={scss.main}>
         <h2>{t('login')}</h2>
-        {error ? (
-          <div className={css.error}>
-            <p>{error}</p>
-          </div>
-        ) : (
-          ''
-        )}
         <label>
           {t('email')}
           <input
@@ -42,23 +34,23 @@ export default function Login_page() {
             onChange={e => setPassword(e.target.value)}
           />
         </label>
-        <div className={css.captcha}>
+        <div className={scss.captcha}>
           <ReCAPTCHA
             sitekey='6LfQQkohAAAAAH5coI75ZApxmylS0mQ9hvxwg9wQ'
             onErrored={() => alert('Check your internet connection')}
             onChange={() => setCaptcha(!captcha)}
           />
         </div>
-        <button className={css.login}>{t('login_btn')}</button>
-        <button className={css.googleBtn}>
+        <button className={scss.login}>{t('login_btn')}</button>
+        <button className={scss.googleBtn}>
           <img src='./images/login-page/google_icon.png' alt='' />
           <span>{t('google_btn')}</span>
         </button>
-        <div className={css.forgot_password}>
-          <Link to='/password'>{t('forgot_password')}</Link>
+        <div className={scss.forgot_password}>
+          <Link to='/reset-password'>{t('forgot_password')}</Link>
         </div>
         <hr />
-        <div className={css.register}>
+        <div className={scss.register}>
           <span>{t('account')}</span>
           <Link to='/register'>{t('register')}</Link>
         </div>
