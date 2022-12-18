@@ -10,6 +10,7 @@ export default function LoginPage() {
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
   const [captcha, setCaptcha] = useState(false)
+  const [error, setError] = useState('')
   return (
     <div className={scss.wrapper}>
       <form className={scss.main}>
@@ -37,13 +38,14 @@ export default function LoginPage() {
         <div className={scss.captcha}>
           <ReCAPTCHA
             sitekey='6LfQQkohAAAAAH5coI75ZApxmylS0mQ9hvxwg9wQ'
-            onErrored={() => alert('Check your internet connection')}
             onChange={() => setCaptcha(!captcha)}
+            onErrored={() => setError('Something went wrong')}
           />
         </div>
+        <div className={scss.error}>{error && <p> {error} </p>}</div>
         <button className={scss.login}>{t('login_btn')}</button>
         <button className={scss.googleBtn}>
-          <img src='./images/login-page/google_icon.png' alt='' />
+          <img src='./images/login-page/google_icon.png' alt='google icon' />
           <span>{t('google_btn')}</span>
         </button>
         <div className={scss.forgot_password}>
