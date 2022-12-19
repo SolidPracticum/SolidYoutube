@@ -39,10 +39,10 @@ export default function LoginPage() {
           <ReCAPTCHA
             sitekey='6LfQQkohAAAAAH5coI75ZApxmylS0mQ9hvxwg9wQ'
             onChange={() => setCaptcha(!captcha)}
-            onErrored={() => setError('Something went wrong')}
+            onErrored={() => setError('Check internet connection')}
           />
         </div>
-        <div className={scss.error}>{error && <p> {error} </p>}</div>
+        {<div className={scss.error}>{error && <p> {error} </p>}</div>}
         <button className={scss.login}>{t('login_btn')}</button>
         <button className={scss.googleBtn}>
           <img src='./images/login-page/google_icon.png' alt='google icon' />
