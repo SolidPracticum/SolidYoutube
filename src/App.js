@@ -5,16 +5,17 @@ import { useTranslation } from 'react-i18next'
 import Sidebar from './sidebar/Sidebar'
 import Shorts from './pages/Shorts'
 import Subscriptions from './pages/Subscriptions'
-// import { useEffect } from 'react'
-// import Api from './api/Api'
 
 function App() {
   const { t } = useTranslation()
 
-  // useEffect(() => {
-  //   Api.getList()
-  //   .then((res) => {console.log(res)})
-  // })
+  // const API_KEY = 'AIzaSyBIUPtI41fZ5z1_am9WfAfuJnr-GTE5Bcs'
+  // const base_url = `https://www.googleapis.com/youtube/v3/search?part=snippet&q=guy&key=${API_KEY}`
+
+  // fetch(base_url)
+  //   .then(res => res.json())
+  //   .then(data => console.log(data))
+  //   .catch(err => console.log(err))
 
   return (
     <div className='App'>

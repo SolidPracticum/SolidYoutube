@@ -6,7 +6,7 @@ export const ListSubscriptions = createAsyncThunk('subscriptions', async() => {
   return res.data
 })
 
-export const SubscriptionsSlice = createSlice({
+const SubscriptionsSlice = createSlice({
   name: 'Subscriptions',
   initialState: {
     data: []

@@ -6,7 +6,7 @@ import { menuItem } from './SidebarData'
 import { footerMenuItem } from './SidebarData'
 import { PosibilitiesMenuItem } from './SidebarData'
 import { NavigatorMenuItem } from './SidebarData'
-import { SubscriptionsMenuItem } from './SidebarData'
+import SubscriptionsSidebar from './SubscriptionsSidebar'
 
 function Sidebar() {
   const [isOpen, setIsOpen] = useState(false)
@@ -18,6 +18,7 @@ function Sidebar() {
         <Link to='#' className='sidebar'>
           <MenuIcon onClick={toggle} />
         </Link>
+
         <div className='wrapp'>
           {menuItem.map((item, index) => (
             <Link to={item.path} key={index} className='link'>
@@ -32,16 +33,7 @@ function Sidebar() {
 
         <div className=''>
           <h3 style={{ display: isOpen ? 'block' : 'none' }}>Subscriptions</h3>
-          {SubscriptionsMenuItem.map((item, index) => (
-            <Link to={item.path} key={index} className='link'>
-              <div style={{ display: isOpen ? 'block' : 'none' }} className='linkText'>
-                {item.icon}
-              </div>
-              <div style={{ display: isOpen ? 'block' : 'none' }} className='linkText'>
-                {item.name}
-              </div>
-            </Link>
-          ))}
+          <SubscriptionsSidebar isOpen={isOpen} />
           <hr style={{ display: isOpen ? 'block' : 'none' }}></hr>
         </div>
 
@@ -96,4 +88,3 @@ function Sidebar() {
 }
 
 export default Sidebar
-

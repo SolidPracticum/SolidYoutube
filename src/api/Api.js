@@ -1,12 +1,21 @@
 import axios from 'axios'
-import { base_url } from './Constant'
+
+const API_KEY = 'AIzaSyBIUPtI41fZ5z1_am9WfAfuJnr-GTE5Bcs'
 
 const http = axios.create({
-  baseURL: base_url,
+  baseURL: 'https://youtube.googleapis.com/youtube/v3',
+  params:{
+    part: 'snippet',
+    part: 'contentDetails',
+    maxResults: 5,
+    key: API_KEY,
+    mine: true,
+  },
+  headers: {}
 })
 
 const Api = {
-  getList: () => http.list('subscriptions'),
+  getList: () => http.get('/subscriptions'),
 }
 
 export default Api

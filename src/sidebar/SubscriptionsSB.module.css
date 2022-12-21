@@ -1,0 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;900&display=swap');
+
+.wrapp img{
+    width: 25px;
+    margin: 0 12px;
+}
+
+.content{
+   display: flex;
+}
