@@ -1,14 +1,14 @@
-import './App.css';
-import { useTranslation } from 'react-i18next';
+import './App.css'
+import { Routes, Route } from 'react-router-dom'
+import HomePage from './pages/HomePage'
 
 function App() {
-  const { t} = useTranslation();
-
   return (
-    <div className="App">
-      {t('greeting')}
+    <div className='App'>
+      <Routes>
+        <Route path='/' element={<HomePage />} />
+      </Routes>
     </div>
-  );
+  )
 }
-
-export default App;
+export default App
