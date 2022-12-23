@@ -1,12 +1,9 @@
-import Video from '../components/video/Video'
-import Comment from '../containers/Comments/Comment/Comment'
+import Videos from '../components/Videos'
 
 function HomePage() {
   return (
     <div className='page'>
-      <h1>Home page</h1>
-      <Video />
-      <Comment />
+      <Videos />
     </div>
   )
 }
